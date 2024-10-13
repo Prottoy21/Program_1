@@ -11,6 +11,8 @@
     --text-color: rgb(13, 19, 33);
     --span-color: rgb(59, 64, 213);
     --white-color: rgb(255, 255, 255);
+    --blue-color: #0056b3;
+    --dark-white: #ccc;
 }
 
 header > nav {
@@ -86,7 +88,16 @@ main .hero-section img {
 
 
 .headline {
-    color: rgb(13, 19, 33);
+    color: var(--text-color);
+    font-weight: 800;
+    line-height: 45px;
+    letter-spacing: 0%;
+    gap: 24;
+    text-align: center;
+}
+
+.footer-headline {
+    color: var(--white-color);
     font-weight: 800;
     line-height: 45px;
     letter-spacing: 0%;
@@ -151,13 +162,12 @@ main .hero-section .btn {
     margin: 32px 0;
     padding: 32px;
     border-radius: 8px;
-    background: linear-gradient(90.00deg, rgb(255, 255, 255),rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(90.00deg, rgb(var(--white-color)),rgba(var(--white-color), 0) 100%);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .section-2, .section-3, .section-4 {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     justify-content: space-around;
 }
@@ -268,10 +278,110 @@ h3 {
     display: flex;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid rgba(13, 19, 33, 0.15);
+    border: 1px solid rgba(var(--text-color), 0.15);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 16px;
     background: rgb(255, 255, 255);
     padding: 40px;
     gap: 30px;
+}
+.footer {
+    border-radius: 16px;
+    width: 1012px;
+    position: relative; 
+    height: 300px; 
+    color: var(--white-color); 
+    padding: 20px; 
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/handshake.jpg') no-repeat center center; 
+    background-size: cover;
+    filter: brightness(50%); 
+    z-index: 1; 
+    border-radius: 16px; 
+}
+
+.text-section {
+    width: 770px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px; 
+    padding: 0px;
+    z-index: 2; 
+}
+
+form {
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    box-sizing: border-box;
+    border: 1px solid rgba(var(--text-color), 0.15);
+    border-radius: 8px;
+    z-index: 2; 
+}
+
+input[type="text"] {
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid var(--dark-white); 
+    border-radius: 8px; 
+    width: 580px;
+    height: 60px;
+}
+
+.submit {
+    padding: 10px 20px; 
+    width: 125px;
+    height: 60px;
+    border: none; 
+    background-color: var(--white-color); 
+    color: var(--text-color); 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.submit:hover {
+    background-color: var(--blue-color); 
+    transform: scale(1.05); 
+    color: var(--white-color);
+}
+
+.copyright-section {
+    width: 100%;
+    height: 106px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(13, 19, 33, 0.03);
+}
+
+.copyright-section .right ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.copyright-section .right ul li {
+    list-style: none;
 }
