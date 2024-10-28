@@ -15,6 +15,12 @@
     --dark-white: #ccc;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
 header > nav {
     display: flex;
     justify-content: space-between;
@@ -28,7 +34,6 @@ header > nav > ul {
 
 header nav ul li a {
     color: var(--text-color);
-    /* font-family: Azeret Mono; */
     font-size: 24px;
     font-weight: 800;
     line-height: 33px;
@@ -285,6 +290,7 @@ h3 {
     padding: 40px;
     gap: 30px;
 }
+
 .footer {
     border-radius: 16px;
     width: 1012px;
@@ -297,7 +303,6 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden; 
 }
 
 .footer::before {
@@ -384,4 +389,263 @@ input[type="text"] {
 
 .copyright-section .right ul li {
     list-style: none;
+}
+
+
+
+
+.hide {
+    display: none;
+}
+
+
+/* Responsive styles */
+/* Mobile styles */
+@media (max-width: 576px) {
+
+    header {
+        width: 100%;
+    }
+
+    header > nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    main, 
+    main .hero-section, 
+    main .hero-section .head-para {
+        width: 100%;
+    }
+
+    main .hero-section {
+        margin: 10px;
+    }
+
+    .container .box-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .container .box-container .section-1,
+    .container .box-container .section-2,
+    .container .box-container .section-3,
+    .container .box-container .section-4 {
+        width: 100%;
+        padding: 10px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .container iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .container .box, .container .inspiration {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container .box-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .three-card, .three-div {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card-1, .card-2, .card-3,
+    .card-one, .card-two, .card-three {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    } 
+
+    .card-one img, .card-two img, .card-three img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    } 
+
+    .footer {
+        width: 100%;
+        height: 80%;
+    }
+
+    .footer .text-section, .footer .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    input[type="text"] {
+        width: 300px;
+        height: 120px;
+    }
+
+    .submit {
+        padding: 10px; 
+        width: 100px;
+        height: 40px;
+        margin-top: 20px;
+    }
+
+    .copyright-section {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .copyright-section .right ul {
+        gap: 10px;
+    }
+    
+    .copyright-section .left {
+        text-align: center;
+    }
+} 
+
+
+@media (min-width: 576px) and (max-width: 992px) {
+
+    header {
+        width: 100%;
+    }
+
+    header > nav {
+        display: flex;
+        /* flex-direction: row;  */
+        justify-content: space-between; 
+        align-items: center;
+        gap: 20px;
+    }
+
+    main, 
+    main .hero-section, 
+    main .hero-section .head-para {
+        width: 100%;
+    }
+
+    main .hero-section {
+        margin: 20px; 
+    }
+
+    .container .box-container {
+        width: 100%;
+        padding: 10px; 
+    }
+
+    .container .box-container .section-1,
+    .container .box-container .section-2,
+    .container .box-container .section-3,
+    .container .box-container .section-4 {
+        width: 100%;
+        padding: 15px; 
+        gap: 15px; 
+        flex-direction: row; 
+    }
+
+    .container iframe {
+        width: 100%;
+        height: 400px; 
+    }
+
+    .container .box, .container .inspiration {
+        width: 100%;
+        padding: 15px; 
+    }
+
+    .container .box-section {
+        flex-direction: row;
+        gap: 20px; 
+    }
+
+    .three-card, .three-div {
+        flex-direction: row; 
+        align-items: flex-start; 
+        gap: 20px;
+    }
+
+    .card-1, .card-2, .card-3,
+    .card-one, .card-two, .card-three {
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    } 
+
+    .card-one img, .card-two img, .card-three img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px; 
+    } 
+
+    .footer {
+        width: 100%;
+        height: auto; 
+    }
+
+    .footer .text-section, .footer .form {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    input[type="text"] {
+        width: 400px;
+        height: 50px; 
+    }
+
+    .submit {
+        padding: 10px; 
+        width: 120px; 
+        height: 45px; 
+        margin-top: 20px;
+    }
+
+    .copyright-section {
+        height: auto;
+        padding: 30px; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .copyright-section .right ul {
+        gap: 10px;
+    }
+    
+    .copyright-section .left {
+        text-align: center;
+    }
 }
